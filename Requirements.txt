@@ -1,0 +1,39 @@
+import warnings
+warnings.filterwarnings("ignore") # code to ignore all warnings
+import numpy as np
+import pandas as pd
+import os
+import re
+import nltk
+nltk.download('stopwords') # downloading stopwords from nltk
+nltk.download('punkt')     # downloading punkt from nltk
+from nltk.corpus import stopwords
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.feature_extraction.text import CountVectorizer,TfidfVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import LinearSVC
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import classification_report,confusion_matrix, accuracy_score, log_loss,roc_curve, auc,RocCurveDisplay
+from sklearn.metrics import PrecisionRecallDisplay,ConfusionMatrixDisplay
+import joblib
+from sklearn.model_selection import GridSearchCV
+import random
+from nltk.corpus import wordnet
+# Importing tensorflow and keras libraries for Deep Learning
+import tensorflow as tf
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Embedding, LSTM, Dense, Dropout, Bidirectional
+from sklearn.preprocessing import LabelEncoder
+# importing libraries required for hyperparameter tuning
+from kerastuner import HyperModel
+from kerastuner.tuners import RandomSearch
+# importing libraries required for CNN
+from keras.models import Sequential
+from keras.layers import Conv1D, MaxPooling1D, Flatten, Dense, Embedding, Dropout
+from keras.preprocessing.sequence import pad_sequences
+import kerastuner as kt
